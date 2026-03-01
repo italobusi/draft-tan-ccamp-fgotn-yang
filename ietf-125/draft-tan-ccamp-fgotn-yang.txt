@@ -5,12 +5,12 @@
 Common Control and Measurement Plane                              Y. Tan
 Internet-Draft                                                  Y. Zheng
 Intended status: Standards Track                            China Unicom
-Expires: 31 August 2026                                          I. Busi
+Expires: 2 September 2026                                        I. Busi
                                                                    C. Yu
                                                      Huawei Technologies
                                                                  X. Zhao
                                                                    CAICT
-                                                        27 February 2026
+                                                            1 March 2026
 
 
        YANG Data Models for fine grain Optical Transport Network
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 August 2026.
+   This Internet-Draft will expire on 2 September 2026.
 
 Copyright Notice
 
@@ -496,7 +496,7 @@ Table of Contents
 
    augment /nw:networks/tet:te/tet:templates/tet:link-template
            /tet:te-link-attributes/tet:label-restrictions
-           /tet:label-restriction/otnt:otn-label-range:
+           /tet:label-restriction:
       +--rw fgts-range* [odu-type odu-ts-number]
          +--rw odu-type           identityref
          +--rw odu-ts-number?     uint16
@@ -551,7 +551,7 @@ Table of Contents
    The model augment TE bandwidth information of fgOTN tunnel.
 
    augment /te:te/te:tunnels/te:tunnel/te:te-bandwidth/te:technology
-           /otn-tnl:otn:
+           /otn-tnl:otn/otn-tnl:otn-bandwidth:
       +--rw fgoduflex-bandwidth?   string
 
    The string value fgoduflex-bandwidth is used to indicate the
@@ -1151,9 +1151,9 @@ Table of Contents
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
               Bryskin, "A YANG Data Model for Traffic Engineering
               Tunnels, Label Switched Paths, and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-42, 24
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-43, 28
               February 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-42>.
+              draft-ietf-teas-yang-te-43>.
 
    [ITU-T_G.709]
               International Telecommunication Union, "Interfaces for the
