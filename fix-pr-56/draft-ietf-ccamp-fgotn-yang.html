@@ -1846,8 +1846,8 @@ All link bandwidth information that supports fgOTN should be reported to MDSC by
     +--rw fgts-range* [odu-type odu-ts-number]
         +--rw odu-type           identityref
         +--rw odu-ts-number?     fgotnt:ts-list
-        +--rw fgts-reserved?     fgotnt:ts-list
-        +--rw fgts-unreserved?   fgotnt:ts-list
+        +--rw fgts-reserved?     fgotn-types:ts-list-or-empty
+        +--rw fgts-unreserved?   fgotn-types:ts-list-or-empty
 </pre><a href="#section-4.3-2" class="pilcrow">¶</a>
 </div>
 <p id="section-4.3-3">The fgts-range list is used to describe the availability of fgOTN timeslot in the server ODUk, including the fgts-reserved and fgts-unreserved. The odu-ts-number is used to indicate the index of server ODUk channel.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
