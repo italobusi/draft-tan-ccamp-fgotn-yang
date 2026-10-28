@@ -2265,7 +2265,7 @@ module ietf-fgotn-topology {
 <p id="section-9-1"><a href="#fig-fgotn-tunnel-tree" class="auto internal xref">Figure 9</a> below shows the tree diagram of the YANG data model defined in module "ietf-fgotn-tunnel" (<a href="#fgotn-tunnel-yang" class="auto internal xref">Figure 10</a>).<a href="#section-9-1" class="pilcrow">¶</a></p>
 <div id="fig-fgotn-tunnel-tree">
 <figure id="figure-9">
-        <div class="lang-yangtree sourcecode" id="section-9-2.1">
+        <div class="breakable lang-yangtree sourcecode" id="section-9-2.1">
 <pre>
 module: ietf-fgotn-tunnel
 
@@ -2284,7 +2284,7 @@ module: ietf-fgotn-tunnel
             /te:path-route-objects/te:path-route-object/te:type
             /te:label/te:label-hop/te:te-label/te:technology
             /otn-tnl:otn/otn-tnl:otn-label:
-    +--ro fgts-numbers?   string
+    +--ro fgts-numbers?   fgotn-types:ts-list
   augment /te:te/te:tunnels/te:tunnel/te:primary-paths
             /te:primary-path/te:primary-reverse-path
             /te:explicit-route-objects
@@ -2292,18 +2292,39 @@ module: ietf-fgotn-tunnel
             /te:label-hop/te:te-label/te:technology/otn-tnl:otn
             /otn-tnl:otn-label:
     +--rw fgts-numbers?   fgotn-types:ts-list
+  augment /te:te/te:tunnels/te:tunnel/te:primary-paths
+            /te:primary-path/te:primary-reverse-path
+            /te:computed-paths-properties/te:computed-path-properties
+            /te:path-properties/te:path-route-objects
+            /te:path-route-object/te:type/te:label/te:label-hop
+            /te:te-label/te:technology/otn-tnl:otn/otn-tnl:otn-label:
+    +--ro fgts-numbers?   fgotn-types:ts-list
   augment /te:te/te:tunnels/te:tunnel/te:secondary-paths
             /te:secondary-path/te:explicit-route-objects
             /te:route-object-include-exclude/te:type/te:label
             /te:label-hop/te:te-label/te:technology/otn-tnl:otn
             /otn-tnl:otn-label:
     +--rw fgts-numbers?   fgotn-types:ts-list
+  augment /te:te/te:tunnels/te:tunnel/te:secondary-paths
+            /te:secondary-path/te:computed-paths-properties
+            /te:computed-path-properties/te:path-properties
+            /te:path-route-objects/te:path-route-object/te:type
+            /te:label/te:label-hop/te:te-label/te:technology
+            /otn-tnl:otn/otn-tnl:otn-label:
+    +--ro fgts-numbers?   fgotn-types:ts-list
   augment /te:te/te:tunnels/te:tunnel/te:secondary-reverse-paths
             /te:secondary-reverse-path/te:explicit-route-objects
             /te:route-object-include-exclude/te:type/te:label
             /te:label-hop/te:te-label/te:technology/otn-tnl:otn
             /otn-tnl:otn-label:
     +--rw fgts-numbers?   fgotn-types:ts-list
+  augment /te:te/te:tunnels/te:tunnel/te:secondary-reverse-paths
+            /te:secondary-reverse-path/te:computed-paths-properties
+            /te:computed-path-properties/te:path-properties
+            /te:path-route-objects/te:path-route-object/te:type
+            /te:label/te:label-hop/te:te-label/te:technology
+            /otn-tnl:otn/otn-tnl:otn-label:
+    +--ro fgts-numbers?   fgotn-types:ts-list
   augment /te:te/te:lsps/te:lsp/te:lsp-actual-route-information
             /te:lsp-actual-route-information/te:type/te:label
             /te:label-hop/te:te-label/te:technology/otn-tnl:otn
@@ -2464,7 +2485,7 @@ module ietf-fgotn-tunnel {
     description
       "augmentation of fgOTN label";
     leaf fgts-numbers {
-      type string;
+      type fgotn-types:ts-list;
       description
         "Augment fgOTN timeslot information of this label hop";
     }
@@ -2495,7 +2516,7 @@ module ietf-fgotn-tunnel {
     description
       "augmentation of fgOTN label";
     leaf fgts-numbers {
-      type string;
+      type fgotn-types:ts-list;
       description
         "Augment fgOTN timeslot information of this label hop";
     }
@@ -2524,7 +2545,7 @@ module ietf-fgotn-tunnel {
     description
       "augmentation of fgOTN label";
     leaf fgts-numbers {
-      type string;
+      type fgotn-types:ts-list;
       description
         "Augment fgOTN timeslot information of this label hop";
     }
@@ -2554,7 +2575,7 @@ module ietf-fgotn-tunnel {
     description
       "augmentation of fgOTN label";
     leaf fgts-numbers {
-      type string;
+      type fgotn-types:ts-list;
       description
         "Augment fgOTN timeslot information of this label hop";
     }
