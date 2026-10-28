@@ -468,10 +468,7 @@ Table of Contents
    fgOTN topology and the model presented in this document only
    specifies technology-specific attributes/information.  The fgOTN-
    specific attributes including the fgTS, can be used to represent the
-   bandwidth and label information.  At the same time, it is necessary
-   to extend the encoding and switching-capability enumeration values in
-   [I-D.ietf-teas-rfc8776-update] to identify that the current Tunnel
-   Termination Point (TTP) is a termination point of an fgOTN tunnel.
+   bandwidth and label information.
 
 4.2.  Bandwidth Augmentation
 
@@ -1276,13 +1273,6 @@ Table of Contents
               <https://www.rfc-editor.org/rfc/rfc8795>.
 
 14.2.  Informative References
-
-   [I-D.ietf-teas-rfc8776-update]
-              Busi, I., Guo, A., Liu, X., Saad, T., and I. Bryskin,
-              "Common YANG Data Types for Traffic Engineering", Work in
-              Progress, Internet-Draft, draft-ietf-teas-rfc8776-update-
-              24, 12 June 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-rfc8776-update-24>.
 
    [RFC7951]  Lhotka, L., "JSON Encoding of Data Modeled with YANG",
               RFC 7951, DOI 10.17487/RFC7951, August 2016,
