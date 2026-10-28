@@ -1926,7 +1926,7 @@ All link bandwidth information that supports fgOTN should be reported to MDSC by
         <h3 id="name-label-augmentation-2">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-label-augmentation-2" class="section-name selfRef">Label Augmentation</a>
         </h3>
-<p id="section-5.3-1">The module augments TE label-hop for the explicit route objects included or excluded by the path computation of the primary-paths and secondary-paths using the fgts-numbers. The fgts-numbers is used to specify fgTS information on inter-domain ports of the routing path. When specifying the fgotn time slot in the routing constraint information, the ODU time slot must also be specified. We also augment the TE label-hop for the record route of the LSP using the fgts-numbers.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">The module augments TE label-hop for the explicit route objects included or excluded by the path computation of the primary-paths and secondary-paths using the fgts-numbers. The fgts-numbers specifies the fgTS information for the explicit route objects and computed path properties of fgOTN paths, under the corresponding occurrences of the tet:te-label container. We also augment the TE label-hop for the record route of the LSP using the fgts-numbers. When specifying the fgotn time slot in the routing constraint information, the ODU time slot must also be specified. The ts-list (together with the tsg) represents the time slots assigned to the ODUk server-layer tunnel, while the fgts-numbers represents the fgTSs assigned to the fgOTN client-layer tunnel.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2826,7 +2826,10 @@ topology depicted in <a href="#fig-example" class="auto internal xref">Figure 11
           </ul>
 </li>
       </ol>
-<div class="breakable lang-json sourcecode" id="appendix-B-8">
+<p id="appendix-B-8">The example also instantiates the "ietf-fgotn-tunnel" model to setup two fgOTN tunnel within the fgOTN topology shown in <a href="#fig-example" class="auto internal xref">Figure 11</a>.<a href="#appendix-B-8" class="pilcrow">¶</a></p>
+<p id="appendix-B-9">-an 20M protected fgOTN tunnel between NE1 and NE4. The protected fgODUflex tunnel has a primary LSP, instatiating the NE1-NE2-NE4 primary TE and a secondary LSP, instantiating the NE1-NE3-NE4 secondary TE path.<a href="#appendix-B-9" class="pilcrow">¶</a></p>
+<p id="appendix-B-10">-an 20M unprotected fgOTN tunnel between NE2-NE4. The unprotected fgODUflex tunnel has a primary LSP, instatiating the NE2-NE4 primary TE path.<a href="#appendix-B-10" class="pilcrow">¶</a></p>
+<div class="breakable lang-json sourcecode" id="appendix-B-11">
 <pre>
 =============== NOTE: '\' line wrapping per RFC 8792 ================
 
@@ -6022,7 +6025,7 @@ topology depicted in <a href="#fig-example" class="auto internal xref">Figure 11
     ]
   }
 }
-</pre><a href="#appendix-B-8" class="pilcrow">¶</a>
+</pre><a href="#appendix-B-11" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
