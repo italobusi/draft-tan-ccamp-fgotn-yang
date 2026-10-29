@@ -5,12 +5,12 @@
 CCAMP Working Group                                               Y. Tan
 Internet-Draft                                                  Y. Zheng
 Intended status: Standards Track                            China Unicom
-Expires: 1 May 2027                                              I. Busi
+Expires: 2 May 2027                                              I. Busi
                                                                    C. Yu
                                                      Huawei Technologies
                                                                  X. Zhao
                                                                    CAICT
-                                                         28 October 2026
+                                                         29 October 2026
 
 
        YANG Data Models for fine grain Optical Transport Network
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 May 2027.
+   This Internet-Draft will expire on 2 May 2027.
 
 Copyright Notice
 
@@ -550,10 +550,13 @@ Table of Contents
 
      augment /te:te/te:tunnels/te:tunnel/te:te-bandwidth/te:technology
              /otn-tnl:otn/otn-tnl:otn-bandwidth:
-       +--rw fgoduflex-bandwidth?   string
+       +--rw fgoduflex-bandwidth?   uint8
 
-   The string value fgoduflex-bandwidth is used to indicate the
-   bandwidth of this fgOTN tunnel.
+   The fgoduflex-bandwidth leaf specifies the bandwidth of an fgOTN
+   tunnel when the ODU type is fgODUflex.  The value is expressed as an
+   integer multiplier of 10 Mbit/s, with a valid range of 1 to 119,
+   corresponding to the fine-granularity bandwidth granularities defined
+   in Table M.3 of [ITU-T_G.709].
 
 5.3.  Label Augmentation
 
