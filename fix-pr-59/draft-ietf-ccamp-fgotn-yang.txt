@@ -5,12 +5,12 @@
 CCAMP Working Group                                               Y. Tan
 Internet-Draft                                                  Y. Zheng
 Intended status: Standards Track                            China Unicom
-Expires: 24 April 2027                                           I. Busi
+Expires: 2 May 2027                                              I. Busi
                                                                    C. Yu
                                                      Huawei Technologies
                                                                  X. Zhao
                                                                    CAICT
-                                                         21 October 2026
+                                                         29 October 2026
 
 
        YANG Data Models for fine grain Optical Transport Network
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 April 2027.
+   This Internet-Draft will expire on 2 May 2027.
 
 Copyright Notice
 
@@ -1144,9 +1144,10 @@ Table of Contents
 
    *  "fgotn-tnl:fgts-numbers"
 
-      This data node specifies the fgTS information on inter-domain
-      ports of the routing path under any occurrence of the tet:te-label
-      container, as defined in [I-D.ietf-teas-yang-te] (e.g.,
+      This data node specifies the fgTS information for the explicit
+      route objects and computed path properties of fgOTN paths, under
+      the corresponding occurrences of the tet:te-label container, as
+      defined in [I-D.ietf-teas-yang-te] (e.g.,
       "/te:te/te:tunnels/te:tunnel/te:primary-paths/te:primary-path/
       te:explicit-route-objects/te:route-object-include-
       exclude/te:type/te:label/te:label-hop/te:te-
@@ -1180,9 +1181,10 @@ Table of Contents
 
    *  "fgotn-tnl:fgts-numbers"
 
-      This data node specifies the fgTS information on inter-domain
-      ports of the routing path under any occurrence of the tet:te-label
-      container, as defined in [I-D.ietf-teas-yang-te] (e.g.,
+      This data node specifies the fgTS information for the explicit
+      route objects and computed path properties of fgOTN paths, under
+      the corresponding occurrences of the tet:te-label container, as
+      defined in [I-D.ietf-teas-yang-te] (e.g.,
       "/te:te/te:tunnels/te:tunnel/te:primary-paths/te:primary-path/
       te:explicit-route-objects/te:route-object-include-
       exclude/te:type/te:label/te:label-hop/te:te-
