@@ -582,7 +582,7 @@ Table of Contents
    In addition to importing [I-D.ietf-ccamp-layer1-types], this module
    references the following documents in defining its types: [RFC7139].
 
-   <CODE BEGINS> file "ietf-fgotn-types@2026-02-27.yang"
+   <CODE BEGINS> file "ietf-fgotn-types@2026-10-29.yang"
    module ietf-fgotn-types {
      yang-version 1.1;
      namespace "urn:ietf:params:xml:ns:yang:ietf-fgotn-types";
@@ -637,7 +637,7 @@ Table of Contents
      // RFC Ed.: update the date below with the date of RFC publication
      // and remove this note.
 
-     revision 2026-10-28 {
+     revision 2026-10-29 {
        description
          "initial version";
        reference
@@ -743,7 +743,7 @@ Table of Contents
 
    *  "ietf-fgotn-types" as defined in Section 6 of this document
 
-   <CODE BEGINS> file "ietf-fgotn-topology@2026-07-23.yang"
+   <CODE BEGINS> file "ietf-fgotn-topology@2026-09-29.yang"
    module ietf-fgotn-topology {
      yang-version 1.1;
      namespace "urn:ietf:params:xml:ns:yang:ietf-fgotn-topology";
@@ -965,7 +965,7 @@ Table of Contents
    [I-D.ietf-ccamp-otn-tunnel-model], this module references the
    following documents: [ITU-T_G.709].
 
-   <CODE BEGINS> file "ietf-fgotn-tunnel@2026-10-20.yang"
+   <CODE BEGINS> file "ietf-fgotn-tunnel@2026-10-29.yang"
    module ietf-fgotn-tunnel {
      yang-version 1.1;
      namespace "urn:ietf:params:xml:ns:yang:ietf-fgotn-tunnel";
@@ -1036,7 +1036,7 @@ Table of Contents
      // RFC Ed.: update the date below with the date of RFC publication
      // and remove this note.
 
-     revision 2026-10-28 {
+     revision 2026-10-29 {
        description
          "initial version";
        reference
@@ -1075,11 +1075,7 @@ Table of Contents
            + "/otn-tnl:otn-label" {
        description
          "augmentation of fgOTN label";
-       leaf fgts-numbers {
-         type fgotn-types:ts-list;
-         description
-           "Augment fgOTN timeslot information of this label hop";
-       }
+       uses fgotn-types:fgotn-label-hop;
      }
 
      augment "/te:te/te:tunnels/te:tunnel/"

@@ -1946,7 +1946,7 @@ All link bandwidth information that supports fgOTN should be reported to MDSC by
 <span id="name-fgotn-types-yang-module"></span><div id="fgotn-types-yang">
 <figure id="figure-6">
         <div class="breakable lang-yang sourcecode" id="section-6-4.1">
-<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-types@2026-02-27.yang"
+<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-types@2026-10-29.yang"
 
 module ietf-fgotn-types {
   yang-version 1.1;
@@ -2002,7 +2002,7 @@ module ietf-fgotn-types {
   // RFC Ed.: update the date below with the date of RFC publication
   // and remove this note.
 
-  revision 2026-10-28 {
+  revision 2026-10-29 {
     description
       "initial version";
     reference
@@ -2134,7 +2134,7 @@ module: ietf-fgotn-topology
 <span id="name-fgotn-topology-yang-module"></span><div id="fgotn-topology-yang">
 <figure id="figure-8">
         <div class="breakable lang-yang sourcecode" id="section-8-3.1">
-<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-topology@2026-07-23.yang"
+<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-topology@2026-09-29.yang"
 
 module ietf-fgotn-topology {
   yang-version 1.1;
@@ -2377,7 +2377,7 @@ module: ietf-fgotn-tunnel
 <span id="name-fgotn-tunnel-yang-module"></span><div id="fgotn-tunnel-yang">
 <figure id="figure-10">
         <div class="breakable lang-yang sourcecode" id="section-10-4.1">
-<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-tunnel@2026-10-20.yang"
+<pre>&lt;CODE BEGINS&gt; file "ietf-fgotn-tunnel@2026-10-29.yang"
 
 module ietf-fgotn-tunnel {
   yang-version 1.1;
@@ -2449,7 +2449,7 @@ module ietf-fgotn-tunnel {
   // RFC Ed.: update the date below with the date of RFC publication
   // and remove this note.
 
-  revision 2026-10-28 {
+  revision 2026-10-29 {
     description
       "initial version";
     reference
@@ -2488,11 +2488,7 @@ module ietf-fgotn-tunnel {
         + "/otn-tnl:otn-label" {
     description
       "augmentation of fgOTN label";
-    leaf fgts-numbers {
-      type fgotn-types:ts-list;
-      description
-        "Augment fgOTN timeslot information of this label hop";
-    }
+    uses fgotn-types:fgotn-label-hop;
   }
 
   augment "/te:te/te:tunnels/te:tunnel/"
